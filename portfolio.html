@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                autoplay: true,     // Add this line to enable automatic transitions
+                autoplaySpeed: 3000 // Adjust the time (in milliseconds) between transitions
+            });
+        });
+
+    </script>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        nav ul.nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul.nav-links li {
+            margin-right: 20px;
+        }
+
+        nav ul.nav-links li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul.nav-links li a:hover {
+            color: #f39c12;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        article {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+
+        /* Contact Section Styles */
+        #contact {
+            background-color: #f7f7f7;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        #contact p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        #contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #contact li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        #contact a {
+            color: #0077b5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #contact a:hover {
+            color: #005ea2;
+        }
+
+            /* Carousel Styles */
+            #experience-carousel {
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            #experience-carousel h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+                color: #333;
+            }
+
+            .carousel {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .slick-slide {
+                text-align: center;
+                padding: 20px;
+                background-color: #f7f7f7;
+                border: 1px solid #e0e0e0;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .slick-prev,
+            .slick-next {
+                font-size: 24px;
+            }
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul.nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 100%;
+            }
+
+            nav ul.nav-links li {
+                margin-right: 0;
+            }
+
+            nav ul.nav-links li a {
+                padding: 10px;
+                text-align: center;
+                display: block;
+                border-bottom: 1px solid white;
+            }
+
+            nav.active ul.nav-links {
+                display: flex;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>An accomplished Full Stack Developer</h1>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="experience-carousel">
+            <h2>My Experience</h2>
+            <div class="carousel">
+                <div>
+                    <h3>Apple Via Advantis Global</h3>
+                    <p>Java Engineer</p>
+                </div>
+                <div>
+                    <h3>Amazon Via Collabera</h3>
+                    <p>Software Developer</p>
+                </div>
+                <div>
+                    <h3>Liyana Digital Healthcare</h3>
+                    <p>Software Developer</p>
+                </div>
+                <div>
+                    <h3>Revo Computer Solutions</h3>
+                    <p>Software Developer</p>
+                </div>
+                <!-- Add more companies and roles here -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>An accomplished Full Stack Developer with a 5-year track record of designing and developing
+                top-performing web applications. Possesses advanced coding abilities and a demonstrated proficiency in
+                web application development, distributed web application development, object-oriented
+                analysis/programming, algorithms, and data structures. Skilled in effectively implementing various
+                cutting-edge technologies, including Java, JavaScript, TypeScript, React, Spring, Spring MVC, JPA,
+                Hibernate, Docker, and AWS cloud development.</p>
+            <p>Languages: Java, C++, TypeScript, JavaScript</p>
+            <p>AWS: EC2, ECS, EKS, ECS Fargate, ELB, EBS, S3, Cloud Front, VPC, IAM, SQS, SNS, Lambda, Cloud Watch, API
+                Gateway</p>
+            <!-- ... Other details ... -->
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Apple Via Advantis Global - Java Engineer</h3>
+                <p>As a Java Engineer at Apple Via Advantis Global, I worked on fixing bugs in restful web services that
+                    leverage stream based APIs using Spring web flux.</p>
+                <p>Enhanced existing restful web services to improve performance and functionality.</p>
+                <p>Developed internal libraries and frameworks for other teams, promoting code reusability and best
+                    practices.</p>
+                <p>Technologies Used: Java, Spring Framework, RESTful API, Git, JUnit, Redis, Spring WebFlux, AWS, OAuth
+                    2.0, Angular</p>
+            </article>
+            <article>
+                <h3>Amazon Via Collabera – Software Developer</h3>
+                <p>As a Software Developer at Amazon Via Collabera, I was responsible for building services in a micro
+                    service architecture that managed a fleet of Amazon's autonomous robots for last-mile delivery.</p>
+                <p>Developed new RESTful web APIs' to add features and functionality to existing services.</p>
+                <p>Hands-on experience with cloud-based technologies like AWS Lambda, CloudFormation, CDK, S3, SQS, SNS,
+                    IOT, CloudWatch, and API Gateway.</p>
+                <p>Containerized applications using Docker and orchestrated deployments with Kubernetes.</p>
+                <p>Worked on a project responsible for installing software on delivery robots through a web portal.</p>
+                <p>Developed an AWS Lambda function that generates reports on all the resources managed by my team.</p>
+                <p>Used CI/CD tools for seamless deployments and updates.</p>
+                <p>Developed front-end components using React and managed state with Redux.</p>
+                <p>Participated in code reviews and wrote unit and integration tests.</p>
+                <p>Technologies Used: HTML, CSS, JavaScript, React, Java, Spring Framework, RESTful API, Git, JUnit,
+                    CI/CD, Docker, Kubernetes, AWS, Agile/Scrum methodologies</p>
+            </article>
+            <article>
+                <h3>Liyana Digital Healthcare - Software Developer</h3>
+                <p>At Liyana Digital Healthcare, I contributed to building a web application system using a
+                    micro-service architecture that stored health care infrastructures.</p>
+                <p>Developed Android applications using Java to enhance patient engagement and user experience.</p>
+                <p>Created responsive front-end applications using React to provide healthcare professionals with easy
+                    access to patient data.</p>
+                <p>Gained hands-on experience with medical technologies like PACS (Picture Archiving and Communication
+                    System), Tele-Radiology, and DICOM (Digital Imaging and Communications in Medicine).</p>
+                <p>Utilized version control systems for collaborative development and wrote comprehensive unit and
+                    integration tests for web applications.</p>
+                <p>Deployed applications for production on AWS, ensuring high availability and scalability.</p>
+                <p>Technologies Used: HTML, CSS, JavaScript, React, Java, Spring Framework, RESTful API, Git, JUnit,
+                    CI/CD, AWS, Agile/Scrum methodologies, Micro-services</p>
+            </article>
+            <article>
+                <h3>Revo Computer Solutions - Software Developer</h3>
+                <p>As a Software Developer at Revo Computer Solutions, I was involved in developing functionalities
+                    using the Agile Scrum Methodology.</p>
+                <p>Utilized core Java concepts like Multithreading, Collections Framework, Exception Handling, File I/O,
+                    Generics, JDBC, and concurrency to build robust applications.</p>
+                <p>Developed user interfaces using Spring MVC framework, JSP, JSTL, HTML5, CSS, JavaScript, JQuery, and
+                    AJAX for seamless user interactions.</p>
+                <p>Interacted with APIs and Web Services using AJAX and React, enhancing application capabilities.</p>
+                <p>Applied Java 8 features such as Parallel Streams, Lambdas, functional interfaces, and filters for
+                    optimized code.</p>
+                <p>Implemented design patterns like Singleton, Factory, DAO, MVC, Façade, State, Strategy, Abstract
+                    Factory, and Composite for modular and maintainable code.</p>
+                <p>Utilized Spring Core annotations for Dependency Injection (DI), Spring MVC for building RESTful APIs,
+                    and Spring Boot for rapid application development.</p>
+                <p>Used JPA as an ORM tool for efficient data management.</p>
+                <p>Built AWS-deployed web applications and REST APIs using Spring Boot with embedded Tomcat.</p>
+                <p>Managed build processes using Maven and Gradle for efficient project development.</p>
+                <p>Contributed to building services for a micro-service architecture application.</p>
+                <p>Technologies Used: HTML, CSS, JavaScript, React, Java, Spring Framework, RESTful API, Git, JUnit,
+                    Micro-services, CI/CD, AWS, Agile/Scrum methodologies</p>
+            </article>
+            <!-- ... Add more projects ... -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out to me:</p>
+            <ul>
+                <li>Email: seidabrar97@gmail.com</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/seidabrar/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn Profile</a></li>
+                <li>Phone: 469 653 8276</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Seid Abrar</p>
+    </footer>
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>
